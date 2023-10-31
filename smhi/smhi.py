@@ -59,14 +59,14 @@ def main():
                 continue
             data = response.json()
             if data["value"]:
-                temp = float(data["value"][0]["value"])
-                station = data["station"]["name"]
-                if temp > largest_temp:
-                    largest_temp = temp
-                    larg_station =  station
-                if temp < lowest_temp:
-                    lowest_temp = temp
-                    low_station =  station
+                # temp = float(data["value"][0]["value"])
+                # station = data["station"]["name"]
+                if float(data["value"][0]["value"]) > largest_temp:
+                    largest_temp = float(data["value"][0]["value"])
+                    larg_station =  data["station"]["name"]
+                if float(data["value"][0]["value"]) < lowest_temp:
+                    lowest_temp = float(data["value"][0]["value"])
+                    low_station =  data["station"]["name"]
         
         print("Highest temperature:", larg_station, largest_temp, "degrees")
         print("Lowest temperature:", low_station, lowest_temp, "degrees")
