@@ -9,4 +9,5 @@ dist/*
 .python-version
 .vscode
 build
-venv*
+*env*
+*json
