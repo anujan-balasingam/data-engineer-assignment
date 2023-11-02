@@ -3,7 +3,6 @@ import requests
 import sys
 
 
-
 class SmhiParser:
     """
     Class to handle communication with and extract data from the SMHI Open API.
